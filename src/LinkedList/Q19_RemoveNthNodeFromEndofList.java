@@ -1,5 +1,8 @@
 package LinkedList;
 
+/**
+ * 删除链表的倒数第N个结点
+ */
 public class Q19_RemoveNthNodeFromEndofList {
 
     public ListNode removeNthFromEnd(ListNode head, int n) {

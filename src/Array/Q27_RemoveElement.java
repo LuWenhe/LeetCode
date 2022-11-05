@@ -26,13 +26,14 @@ public class Q27_RemoveElement {
         int slow = 0, fast = 0;
 
         while (fast < nums.length) {
-            // 如果fast指针指向的值不等于val, 则将该值赋给slow指针指向的值
+            // 如果fast指针指向的值不等于val, 则将该结点的值赋给slow指针指向的结点
             if (nums[fast] != val) {
                 // 注意一定是先赋值, 在移动一位
                 nums[slow] = nums[fast];
                 slow++;
             }
 
+            // 若fast指针指向的值为val, 则跳过该值
             fast++;
         }
 

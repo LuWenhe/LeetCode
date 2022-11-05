@@ -16,6 +16,9 @@ public class Q283_MoveZeroes {
         }
     }
 
+    /**
+     * 使用快慢指针的方式
+     */
     public void moveZeroes2(int[] nums) {
         int slow = 0, fast = 0;
 
@@ -26,6 +29,7 @@ public class Q283_MoveZeroes {
                 slow++;
             }
 
+            // 若fast指针指向的值为0, 则跳过该值
             fast++;
         }
 

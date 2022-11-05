@@ -17,7 +17,7 @@ public class Q290_WordPattern {
         Map<Character, String> p2s = new HashMap<>();
         Map<String, Character> s2p = new HashMap<>();
 
-        // 得到字符串数组
+        // 使用空格来分割得到字符串数组
         String[] split = s.split(" ");
 
         if (pattern.length() != split.length) {
@@ -25,6 +25,7 @@ public class Q290_WordPattern {
         }
 
         for (int i = 0; i < pattern.length(); i++) {
+            // 得到相同位置的字符和字符串
             char pc = pattern.charAt(i);
             String ss = split[i];
 
@@ -41,8 +42,8 @@ public class Q290_WordPattern {
     }
 
     public static void main(String[] args) {
-        String pattern = "abbc";
-        String s = "aa aa aa aa";
+        String pattern = "abba";
+        String s = "aa cc cc aa";
         boolean res = new Q290_WordPattern().wordPattern(pattern, s);
         System.out.println(res);
     }

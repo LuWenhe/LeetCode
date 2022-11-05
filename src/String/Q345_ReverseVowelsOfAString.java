@@ -1,5 +1,8 @@
 package String;
 
+/**
+ * 345.反转字符串中的元音字母
+ */
 public class Q345_ReverseVowelsOfAString {
 
     public String reverseVowels(String s) {
@@ -8,12 +11,12 @@ public class Q345_ReverseVowelsOfAString {
         char[] charArray = s.toCharArray();
 
         while (left < right) {
-            // 如果left指针比总长小并且字符不是元音, 则将left指针向右移动一位
+            // 如果left指针比总长小并且字符不是元音字符, 则将left指针向右移动一位
             while (left < len && !isVowel(charArray[left])) {
                 left++;
             }
 
-            // 如果right指针大于0并且字符不是元音, 则将right指针向左移动一位
+            // 如果right指针大于0并且字符不是元音字符, 则将right指针向左移动一位
             while (right > 0 && !isVowel(charArray[right])) {
                 right--;
             }
@@ -30,7 +33,7 @@ public class Q345_ReverseVowelsOfAString {
         return new String(charArray);
     }
 
-    // 是否是元音
+    // 判断字符是否是元音
     public boolean isVowel(char ch) {
         return "aeiouAEIOU".indexOf(ch) >= 0;
     }

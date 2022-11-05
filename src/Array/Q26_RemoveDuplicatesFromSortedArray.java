@@ -16,11 +16,12 @@ public class Q26_RemoveDuplicatesFromSortedArray {
         int index = 0;
 
         for (int num : copyNums) {
-            // 如果该元素重复, 则跳过
+            // 如果该元素已经在HashSet中, 则不进行添加
             if (!hashSet.add(num)) {
                 continue;
             }
 
+            // 在原来的数组中存放不重复的元素
             nums[index++] = num;
         }
 
@@ -34,9 +35,11 @@ public class Q26_RemoveDuplicatesFromSortedArray {
         int slow = 0, fast = 0;
 
         while (fast < nums.length) {
-            // 如果fast指向的值和slow指向的值不同, 说明不是重复的值, 则将slow指针向前移动一位
+            // 如果fast指向的值和slow指向的值不同, 说明不是重复的值
             if (nums[slow] != nums[fast]) {
+                // 将slow指针向前移动一位
                 slow++;
+                // 将fast指向的值赋值给slow指向的值
                 nums[slow] = nums[fast];
             }
 
@@ -47,7 +50,7 @@ public class Q26_RemoveDuplicatesFromSortedArray {
     }
 
     public static void main(String[] args) {
-        int[] nums = {1};
+        int[] nums = {0, 0, 1, 1, 1, 2, 2, 3, 3, 4};
         int count = new Q26_RemoveDuplicatesFromSortedArray().removeDuplicates2(nums);
         System.out.println(count);
     }
