@@ -1,4 +1,4 @@
-package Array;
+package Array.TwoPointer;
 
 public class Q283_MoveZeroes {
 

@@ -1,4 +1,4 @@
-package Array;
+package Array.TwoPointer;
 
 import java.util.Arrays;
 import java.util.HashSet;

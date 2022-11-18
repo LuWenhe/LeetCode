@@ -1,4 +1,4 @@
-package Array;
+package Array.Binary;
 
 public class Q704_BinarySearch {
 
