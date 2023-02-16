@@ -15,6 +15,7 @@ public class Q304_RangeSumQuery2DImmutable {
 
         for (int i = 1; i <= m; i++) {
             for (int j = 1; j <= n; j++) {
+                // matrix中的i和j需要将preMatrix中的i和j各减去1
                 preMatrix[i][j] = preMatrix[i - 1][j] + preMatrix[i][j - 1] - preMatrix[i - 1][j - 1] + matrix[i - 1][j - 1];
             }
         }
