@@ -2,6 +2,9 @@ package Array.TwoPointer;
 
 import java.util.Arrays;
 
+/**
+ * 27.移除元素
+ */
 public class Q27_RemoveElement {
 
     public int removeElement(int[] nums, int val) {
@@ -41,8 +44,8 @@ public class Q27_RemoveElement {
     }
 
     public static void main(String[] args) {
-        int[] nums = {5, 6, 3, 3, 4};
-        int res = new Q27_RemoveElement().removeElement2(nums, 3);
+        int[] nums = {2, 1, 1, 1, 4};
+        int res = new Q27_RemoveElement().removeElement2(nums, 1);
         System.out.print(res);
     }
 

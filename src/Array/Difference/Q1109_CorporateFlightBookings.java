@@ -37,8 +37,8 @@ public class Q1109_CorporateFlightBookings {
                 {2, 3, 20},
                 {2, 5, 25}
         };
-        int n =5;
 
+        int n =5;
         int[] out = new Q1109_CorporateFlightBookings().corpFlightBookings2(bookings, n);
         System.out.println(Arrays.toString(out));
     }

@@ -3,6 +3,9 @@ package Array.Hash;
 import java.util.HashSet;
 import java.util.Set;
 
+/**
+ * 219.存在重复元素II
+ */
 public class Q219_ContainsDuplicateII {
 
     public boolean containsNearbyDuplicate(int[] nums, int k) {
@@ -36,8 +39,8 @@ public class Q219_ContainsDuplicateII {
     }
 
     public static void main(String[] args) {
-        int[] nums = {1, 0, 1, 1};
-        int k = 1;
+        int[] nums = {1, 2, 3, 1, 2, 3};
+        int k = 2;
         boolean res = new Q219_ContainsDuplicateII().containsNearbyDuplicate2(nums, k);
         System.out.println(res);
     }

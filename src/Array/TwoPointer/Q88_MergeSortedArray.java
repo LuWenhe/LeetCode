@@ -2,6 +2,9 @@ package Array.TwoPointer;
 
 import java.util.Arrays;
 
+/**
+ * 88.合并两个有序数组
+ */
 public class Q88_MergeSortedArray {
 
     public void merge(int[] nums1, int m, int[] nums2, int n) {
@@ -44,7 +47,7 @@ public class Q88_MergeSortedArray {
         new Q88_MergeSortedArray().merge2(nums, m, nums2, n);
 
         for (int num : nums) {
-            System.out.println(num);
+            System.out.print(num + " ");
         }
     }
 

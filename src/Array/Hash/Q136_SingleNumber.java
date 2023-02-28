@@ -3,12 +3,16 @@ package Array.Hash;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * 136.只出现一次的数字
+ */
 public class Q136_SingleNumber {
 
     public int singleNumber(int[] nums) {
         Map<Integer, Integer> hashMap = new HashMap<>();
 
         for (int num : nums) {
+            // 如果该值在HashMap中没出现过, 则默认的value值为0
             Integer count = hashMap.getOrDefault(num, 0);
             hashMap.put(num, ++count);
         }

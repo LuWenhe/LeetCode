@@ -91,7 +91,7 @@ public class Q5_LongestPalindromicSubstring {
 
     public static void main(String[] args) {
         Q5_LongestPalindromicSubstring solution = new Q5_LongestPalindromicSubstring();
-        String res = solution.longestPalindrome2("babad");
+        String res = solution.longestPalindrome("babad");
         System.out.println(res);
 
         String abccba = solution.palindrome("abccba", 2, 3);

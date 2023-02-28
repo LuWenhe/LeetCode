@@ -1,5 +1,8 @@
 package LinkedList;
 
+/**
+ * 86.分隔链表
+ */
 public class Q86_PartitionList {
 
     public ListNode partition(ListNode head, int x) {
@@ -32,8 +35,6 @@ public class Q86_PartitionList {
         int[] elements = {1, 4, 3, 2, 5, 2};
         ListNode head = listNode.createListNode(elements);
         listNode.printListNode(head);
-        System.out.println();
-
         ListNode newHead = new Q86_PartitionList().partition(head, 3);
         listNode.printListNode(newHead);
     }

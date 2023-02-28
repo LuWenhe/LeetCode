@@ -2,11 +2,18 @@ package Tree;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 226.翻转二叉树
+ */
 public class Q226_InvertBinaryTree {
 
-    public TreeNode invertTree(TreeNode root) {
+    void traverse(TreeNode root) {
         if (root == null) {
-            return null;
+            return;
+        }
+
+        if (root.left == null && root.right == null) {
+            return;
         }
 
         // 前序遍历的位置
@@ -15,11 +22,13 @@ public class Q226_InvertBinaryTree {
         root.left = root.right;
         root.right = temp;
 
-        // 递归左结点
         invertTree(root.left);
-        // 递归右节点
         invertTree(root.right);
+    }
 
+    // 通过遍历二叉树的方式, 使用traverse()函数
+    public TreeNode invertTree(TreeNode root) {
+        traverse(root);
         return root;
     }
 

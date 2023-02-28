@@ -2,6 +2,9 @@ package Tree;
 
 import java.util.*;
 
+/**
+ * 94.二叉树的中序遍历
+ */
 public class Q94_BinaryTreeInorderTraversal {
 
     // 中序遍历
@@ -19,9 +22,7 @@ public class Q94_BinaryTreeInorderTraversal {
         inorder(root.right, list);
     }
 
-    /**
-     * 使用递归的方式
-     */
+    // 遍历一棵二叉树, 使用traverse函数和外部变量
     public List<Integer> inorderTraversal(TreeNode root) {
         List<Integer> list = new ArrayList<>();
         inorder(root, list);

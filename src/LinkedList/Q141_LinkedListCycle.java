@@ -1,7 +1,12 @@
 package LinkedList;
 
 import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Set;
 
+/**
+ * 141.环形链表
+ */
 public class Q141_LinkedListCycle {
 
     public boolean hasCycle(ListNode head) {
@@ -14,6 +19,23 @@ public class Q141_LinkedListCycle {
             }
 
             hashMap.put(p, 1);
+            p = p.next;
+        }
+
+        return false;
+    }
+
+    public boolean hasCycle2(ListNode head) {
+        Set<ListNode> hashSet = new HashSet<>();
+        ListNode p = head;
+
+        while (p != null) {
+            // 如果存在HashSet中存在重复的值则会返回false
+            if (!hashSet.add(p)) {
+                return true;
+            }
+
+            hashSet.add(p);
             p = p.next;
         }
 

@@ -4,7 +4,6 @@ import java.util.Arrays;
 
 /**
  * 差分数组工具类
- * <p>
  * diff[i]+=3意味着给nums[i..]所有的元素都加3, 而diff[j+1]-= 3意味着对于nums[j+1..]所有元素减3
  */
 public class Difference {

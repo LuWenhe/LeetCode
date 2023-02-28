@@ -1,5 +1,8 @@
 package Array.Binary;
 
+/**
+ * 704.二分查找
+ */
 public class Q704_BinarySearch {
 
     /**

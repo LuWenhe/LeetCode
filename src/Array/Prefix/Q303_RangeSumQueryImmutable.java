@@ -8,6 +8,10 @@ public class Q303_RangeSumQueryImmutable {
     // preSum[i]表示数组nums从索引0到i的所有元素之和
     private final int[] preSum;
 
+    /**         0   1   2   3   4   5   6
+     * nums:   -2,  0,  3, -5,  2, -1
+     * preSum:  0, -2, -2,  1, -4, -2, -3
+     */
     public Q303_RangeSumQueryImmutable(int[] nums) {
         // preSum[0] = 0，便于计算累加和
         preSum = new int[nums.length + 1];

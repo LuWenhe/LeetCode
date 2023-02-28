@@ -3,6 +3,9 @@ package Tree;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 144.二叉树的前序遍历
+ */
 public class Q144_BinaryTreePreorderTraversal {
 
     public void preorder(TreeNode root, List<Integer> list) {

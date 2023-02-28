@@ -14,7 +14,7 @@ public class Q36_ValidSudoku {
 
                 //横行
                 for (int row = 0; row < 9; row++) {
-                    if (row != j && board[i][row] == board[i][j]) {
+                    if (row != j && board[i][j] == board[i][row]) {
                         return false;
                     }
                 }

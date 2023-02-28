@@ -5,11 +5,14 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
+/**
+ * 217.存在重复元素
+ */
 public class Q217_ContainsDuplicate {
 
     public boolean containsDuplicate(int[] nums) {
-        boolean isRepeat = false;
         Set<Integer> hashSet = new HashSet<>();
+        boolean isRepeat = false;
 
         for (int num : nums) {
             // 如果hashSet中存在相同的元素, 则add方法返回false

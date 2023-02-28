@@ -1,5 +1,8 @@
 package LinkedList;
 
+/**
+ * 24.两两交换链表中的节点
+ */
 public class Q24_SwapNodesInPairs {
 
     public ListNode swapPairs(ListNode head) {

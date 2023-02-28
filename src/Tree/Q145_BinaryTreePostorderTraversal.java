@@ -3,6 +3,9 @@ package Tree;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 145.二叉树的后序遍历
+ */
 public class Q145_BinaryTreePostorderTraversal {
 
     public void postorder(TreeNode root, List<Integer> list) {

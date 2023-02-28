@@ -1,21 +1,21 @@
 package LinkedList;
 
-class ListNode {
-    int val;
-    ListNode next;
+public class ListNode {
+    public int val;
+    public ListNode next;
 
-    ListNode() {}
+    public ListNode() {}
 
-    ListNode(int val) {
+    public ListNode(int val) {
         this.val = val;
     }
 
-    ListNode(int val, ListNode next) {
+    public ListNode(int val, ListNode next) {
         this.val = val;
         this.next = next;
     }
 
-    ListNode createListNode(int[] elements) {
+    public ListNode createListNode(int[] elements) {
         ListNode dummy = new ListNode(-1);
         ListNode p = dummy;
 
@@ -32,7 +32,7 @@ class ListNode {
         return dummy.next;
     }
 
-    void printListNode(ListNode listNode) {
+    public void printListNode(ListNode listNode) {
         if (listNode == null) {
             System.out.println("链表为空");
         }

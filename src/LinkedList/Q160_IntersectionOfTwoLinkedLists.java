@@ -1,5 +1,6 @@
 package LinkedList;
 
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -25,6 +26,27 @@ public class Q160_IntersectionOfTwoLinkedLists {
         return null;
     }
 
+    public ListNode getIntersectionNode2(ListNode headA, ListNode headB) {
+        HashMap<ListNode, Integer> hashMap = new HashMap<>();
+        ListNode p1 = headA, p2 = headB, head = null;
+
+        while (p1 != null) {
+            hashMap.put(p1, 1);
+            p1 = p1.next;
+        }
+
+        while (p2 != null) {
+            if (hashMap.getOrDefault(p2, -1) > 0) {
+                head = p2;
+                break;
+            }
+
+            p2 = p2.next;
+        }
+
+        return head;
+    }
+
     public static void main(String[] args) {
         ListNode listNode = new ListNode();
         int[] elements = {8, 4, 5};
@@ -38,10 +60,7 @@ public class Q160_IntersectionOfTwoLinkedLists {
         ListNode l22 = new ListNode(5, l21);
 
         listNode.printListNode(l11);
-        System.out.println();
-
         listNode.printListNode(l22);
-        System.out.println();
 
         ListNode intersectionNode = new Q160_IntersectionOfTwoLinkedLists().getIntersectionNode(l1, l2);
         System.out.println(intersectionNode.val);

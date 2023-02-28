@@ -1,5 +1,8 @@
 package LinkedList;
 
+/**
+ * 83.删除排序链表中的重复元素
+ */
 public class Q83_RemoveDuplicatesFromSortedList {
 
     /**
@@ -32,12 +35,13 @@ public class Q83_RemoveDuplicatesFromSortedList {
         ListNode slow = head, fast = head;
 
         while (fast != null) {
-            // 如果slow指向的值和fast指向的值不同
+            // 若slow指向的值和fast指向的值不同, 说明fast跳过了重复的值了
             if (slow.val != fast.val) {
                 slow.next = fast;
                 slow = slow.next;
             }
 
+            // 如果slow和fast指向的值相同, 则fast指针一直向前移动
             fast = fast.next;
         }
 
@@ -50,10 +54,7 @@ public class Q83_RemoveDuplicatesFromSortedList {
         ListNode listNode = new ListNode();
         int[] elements = {1, 1, 2, 3, 3};
         ListNode head = listNode.createListNode(elements);
-
         listNode.printListNode(head);
-        System.out.println();
-
         ListNode newHead = new Q83_RemoveDuplicatesFromSortedList().deleteDuplicates2(head);
         listNode.printListNode(newHead);
     }

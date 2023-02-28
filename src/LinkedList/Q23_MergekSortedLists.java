@@ -4,6 +4,9 @@ import java.util.Comparator;
 import java.util.Iterator;
 import java.util.PriorityQueue;
 
+/**
+ * 23.合并K个升序链表
+ */
 public class Q23_MergekSortedLists {
 
     public ListNode mergeKLists(ListNode[] lists) {
@@ -15,7 +18,8 @@ public class Q23_MergekSortedLists {
         ListNode p = dummy;
 
         // 队头存放头结点最小的链表
-        PriorityQueue<ListNode> priorityQueue = new PriorityQueue<>(lists.length, new Comparator<ListNode>() {
+        PriorityQueue<ListNode> priorityQueue
+                = new PriorityQueue<>(lists.length, new Comparator<ListNode>() {
             @Override
             public int compare(ListNode o1, ListNode o2) {
                 return o1.val - o2.val;

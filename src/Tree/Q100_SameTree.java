@@ -1,7 +1,11 @@
 package Tree;
 
+/**
+ * 100.相同的树
+ */
 public class Q100_SameTree {
 
+    // 使用分解问题的方法, 判断两棵树是否相同, 可以分解为判断根结点是否相同, 然后判断左右子树是否相同
     public boolean isSameTree(TreeNode p, TreeNode q) {
         // 如果两个结点都为空, 则两个二叉树相同, 直接返回true
         if (p == null && q == null) {

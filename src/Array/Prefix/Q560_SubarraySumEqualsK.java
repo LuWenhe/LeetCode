@@ -3,6 +3,9 @@ package Array.Prefix;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * 560.和为K的子数组
+ */
 public class Q560_SubarraySumEqualsK {
 
     public int[] runningSum(int[] nums) {

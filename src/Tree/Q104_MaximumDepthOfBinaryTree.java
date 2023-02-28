@@ -1,14 +1,14 @@
 package Tree;
 
 /**
- * 法一：遍历一遍二叉树得出答案
+ * 法一：通过遍历二叉树的方式,需要外部函数traverse
  */
 public class Q104_MaximumDepthOfBinaryTree {
 
     // 记录最大深度
-    int res = 0;
+    int maxDepth = 0;
     // 记录当前遍历到的节点所在的深度
-    int depth = 0;
+    int curDepth = 0;
 
     // 二叉树遍历框架
     void traverse(TreeNode root) {
@@ -18,11 +18,11 @@ public class Q104_MaximumDepthOfBinaryTree {
 
         // 前序位置
         // 进入一个结点的时候结点深度加1
-        depth++;
+        curDepth++;
 
+        // 到达叶子节点，更新最大深度
         if (root.left == null && root.right == null) {
-            // 到达叶子节点，更新最大深度
-            res = Math.max(res, depth);
+            maxDepth = Math.max(maxDepth, curDepth);
         }
 
         traverse(root.left);
@@ -30,13 +30,13 @@ public class Q104_MaximumDepthOfBinaryTree {
 
         // 后序位置
         // 离开一个结点的时候结点深度减1
-        depth--;
+        curDepth--;
     }
 
     // 主函数
     int maxDepth(TreeNode root) {
         traverse(root);
-        return res;
+        return maxDepth;
     }
 
     public static void main(String[] args) {

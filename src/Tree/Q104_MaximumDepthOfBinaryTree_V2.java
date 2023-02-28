@@ -1,7 +1,7 @@
 package Tree;
 
 /**
- * 法二：通过分解问题计算出答案
+ * 法二：通过分解问题计算出左右子树的最大深度
  */
 public class Q104_MaximumDepthOfBinaryTree_V2 {
 
@@ -15,9 +15,7 @@ public class Q104_MaximumDepthOfBinaryTree_V2 {
 
         // 后序位置
         // 一颗子树的最大深度等于左右子树的最大深度取最大值再加上根节点自己
-        int maxDepth = Math.max(leftMax, rightMax) + 1;
-
-        return maxDepth;
+        return Math.max(leftMax, rightMax) + 1;
     }
 
     public static void main(String[] args) {

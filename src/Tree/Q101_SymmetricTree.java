@@ -1,12 +1,17 @@
 package Tree;
 
+/**
+ * 101.对称二叉树
+ */
 public class Q101_SymmetricTree {
 
+    // 使用分解的方法, 判断左右子树是否相等
     public boolean check(TreeNode p, TreeNode q) {
         if (p == null && q == null) {
             return true;
         }
 
+        // 如果p和q指向的结点有一个结点为null,则是不对称的
         if (p == null || q == null) {
             return false;
         }

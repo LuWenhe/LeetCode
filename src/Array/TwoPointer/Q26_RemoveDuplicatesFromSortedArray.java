@@ -4,6 +4,9 @@ import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 
+/**
+ * 26.删除有序数组中的重复项
+ */
 public class Q26_RemoveDuplicatesFromSortedArray {
 
     /**
@@ -51,7 +54,7 @@ public class Q26_RemoveDuplicatesFromSortedArray {
 
     public static void main(String[] args) {
         int[] nums = {0, 0, 1, 1, 1, 2, 2, 3, 3, 4};
-        int count = new Q26_RemoveDuplicatesFromSortedArray().removeDuplicates2(nums);
+        int count = new Q26_RemoveDuplicatesFromSortedArray().removeDuplicates(nums);
         System.out.println(count);
     }
 

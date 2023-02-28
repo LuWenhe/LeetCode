@@ -1,7 +1,7 @@
 package LinkedList;
 
 /**
- * 移除链表元素
+ * 203.移除链表元素
  */
 public class Q203_RemoveLinkedListElements {
 

@@ -1,5 +1,8 @@
 package Array.Binary;
 
+/**
+ * 35.搜索插入位置
+ */
 public class Q35_SearchInsertPosition {
 
     public int searchInsert(int[] nums, int target) {
