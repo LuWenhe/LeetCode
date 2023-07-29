@@ -4,6 +4,13 @@ import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 
+/**
+ * 子集Ⅱ
+ * <p>
+ *
+ * 输入：nums = [1,2,2]
+ * 输出：[[],[1],[1,2],[1,2,2],[2],[2,2]]
+ */
 public class Q90_SubsetsII {
 
     List<List<Integer>> res = new LinkedList<>();

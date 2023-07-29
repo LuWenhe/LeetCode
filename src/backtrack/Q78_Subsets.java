@@ -4,6 +4,13 @@ import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 
+/**
+ * 子集
+ * <p>
+ *
+ * 输入：nums = [1,2,3]
+ * 输出：[[],[1],[2],[1,2],[3],[1,3],[2,3],[1,2,3]]
+ */
 public class Q78_Subsets {
 
     List<List<Integer>> res = new LinkedList<>();
@@ -32,7 +39,7 @@ public class Q78_Subsets {
     }
 
     public static void main(String[] args) {
-        int[] nums = {1, 5, 3, 5};
+        int[] nums = {1, 2, 3};
         List<List<Integer>> subsets = new Q78_Subsets().subsets(nums);
         System.out.println(subsets);
     }

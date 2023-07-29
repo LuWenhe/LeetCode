@@ -3,6 +3,21 @@ package backtrack;
 import java.util.LinkedList;
 import java.util.List;
 
+/**
+ * 组合
+ * <p>
+ *
+ * 输入：n = 4, k = 2
+ * 输出：
+ * [
+ *   [2,4],
+ *   [3,4],
+ *   [2,3],
+ *   [1,2],
+ *   [1,3],
+ *   [1,4],
+ * ]
+ */
 public class Q77_Combinations {
 
     List<List<Integer>> res = new LinkedList<>();
