@@ -13,7 +13,6 @@ public class Difference {
 
     // 输入一个初始数组，区间操作将在这个数组上进行
     public Difference(int[] nums) {
-        assert nums.length > 0;
         diff = new int[nums.length];
         // 根据初始数组构造差分数组
         diff[0] = nums[0];

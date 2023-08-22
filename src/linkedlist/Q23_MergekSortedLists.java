@@ -80,6 +80,7 @@ public class Q23_MergekSortedLists {
         System.out.println(priorityQueue);
 
         Iterator<Integer> iterator = priorityQueue.iterator();
+
         while (iterator.hasNext()) {
             System.out.print(iterator.next() + " ");
         }
