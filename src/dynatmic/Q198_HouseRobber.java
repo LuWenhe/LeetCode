@@ -2,53 +2,37 @@ package dynatmic;
 
 public class Q198_HouseRobber {
 
+    /**
+     * 由于不可以在相邻的房屋闯入, 所以在当前位置 n 房屋可盗窃的最大值,
+     * 要么就是 n-1 房屋可盗窃的最大值, 要么就是 n-2 房屋可盗窃的最大值加上当前房屋的值, 二者之间取最大值
+     */
     public int rob(int[] nums) {
-        return dp(nums, 0);
-    }
+        int len = nums.length;
 
-    public int dp(int[] nums, int start) {
-        if (start >= nums.length) {
+        if (len == 0) {
             return 0;
         }
 
-        // 不抢，去下家
-        int dp = dp(nums, start + 1);
-        // 抢, 去下下家
-        int b = nums[start] + dp(nums, start + 2);
-        return Math.max(dp, b);
-    }
-
-    public int rob2(int[] nums) {
-        if (nums.length == 0) {
-            return 0;
-        }
-
-        // 子问题：
-        // f(k) = 偷 [0..k) 房间中的最大金额
-
-        // f(0) = 0
-        // f(1) = nums[0]
-        // f(k) = max{ rob(k-1), nums[k-1] + rob(k-2) }
-
-        int N = nums.length;
-        int[] dp = new int[N+1];
+        int[] dp = new int[len + 1];
 
         dp[0] = 0;
+        // 位置1的最大值就是nums[0]
         dp[1] = nums[0];
 
-        for (int k = 2; k <= N; k++) {
-            int a = dp[k - 1];
-            int b = nums[k - 1] + dp[k - 2];
+        // dp[2]对应的是位置1可偷窃的最大值, 或者是位置0可偷窃的最大值加上当前房屋的值
+        for(int i = 2; i <= len; i++) {
+            int a = dp[i - 1];
+            int b = dp[i - 2] + nums[i - 1];
 
-            dp[k] = Math.max(a, b);
+            dp[i] = Math.max(a, b);
         }
 
-        return dp[N];
+        return dp[len];
     }
 
     public static void main(String[] args) {
         int[] nums = {1, 2, 3, 1};
-        int rob = new Q198_HouseRobber().rob2(nums);
+        int rob = new Q198_HouseRobber().rob(nums);
         System.out.println(rob);
     }
 

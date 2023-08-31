@@ -14,9 +14,11 @@ public class CrossTheRiver {
         int i = 0, j = n - 1;
 
         while (i <= j) {
+            // 将最轻的和最重的人放在同一条船上
             if (people[i] + people[j] < maxWeight) {
                 i++;
             }
+
 
             j--;
             ++count;

@@ -1,4 +1,4 @@
-package string;
+package greedy;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -39,38 +39,9 @@ public class Q409_LongestPalindrome {
         return len;
     }
 
-    public int longestPalindrome2(String s) {
-        Map<Character, Integer> hashMap = new HashMap<>();
-        int len = 0;
-
-        for (int i = 0; i < s.length(); i++) {
-            char c = s.charAt(i);
-            Integer value = hashMap.getOrDefault(c, 0);
-            hashMap.put(c, ++value);
-        }
-
-        boolean flag = false;
-
-        for (Integer value : hashMap.values()) {
-            len += value;
-
-            // 如果字符有奇数个, 则去除一个
-            if (value % 2 != 0) {
-                len--;
-                flag = true;
-            }
-        }
-
-        if (flag) {
-            len++;
-        }
-
-        return len;
-    }
-
     public static void main(String[] args) {
-        String s = "aaaaaccc";
-        int len = new Q409_LongestPalindrome().longestPalindrome2(s);
+        String s = "aaab";
+        int len = new Q409_LongestPalindrome().longestPalindrome(s);
         System.out.println(len);
     }
 
